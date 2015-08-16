@@ -50,7 +50,10 @@ module.exports = function(environment) {
     }
 
     if (environment === 'production') {
-
+        ENV.apiURL = 'https://benkolera-chirper-api.herokuapp.com';
+        ENV.contentSecurityPolicy['connect-src'] = 'https://benkolera-chirper-api.herokuapp.com';
+        ENV['simple-auth'].crossOriginWhitelist = ['https://benkolera-chirper-api.herokuapp.com'];
+        ENV['simple-auth-oauth2'].serverTokenEndpoint = 'https://benkolera-chirper-api.herokuapp.com/token';
     }
 
     return ENV;
