@@ -3,7 +3,9 @@
 @import "header";
 @import "profile";
 @import "index";
+@import "source";
 @import "pod-styles";
 
+@import "bower_components/font-awesome/scss/font-awesome";
 @import "ember-modal-dialog/ember-modal-structure";
 @import "ember-modal-dialog/ember-modal-appearance";

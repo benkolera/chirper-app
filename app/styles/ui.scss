@@ -67,9 +67,6 @@ button {
     background-color: #FDBB4D;
     border: 1px solid #E5A12F;
     color: #7B5F1E;
-    &:hover {
-      background-color: #F2AD3A;
-    }
   }
 
   &.logout, &.red {
@@ -77,6 +74,11 @@ button {
     margin-top: 10px;
     background-color: rgb(219, 137, 122);
     border: 1px solid rgb(211, 122, 122);
+  }
+
+  &[disabled] {
+      opacity: 0.4;
+      cursor: not-allowed;
   }
 }
 

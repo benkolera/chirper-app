@@ -11,11 +11,19 @@
         {{#liquid-if errorMessage}}
             <p class="error">{{errorMessage}}</p>
         {{/liquid-if}}
-        {{input placeholder="Username" value=username }}
-        {{input type="password" placeholder="Password" value=password }}
+        <form {{action "login" on="submit"}}>
+            {{input placeholder="Username" value=username }}
+            {{input type="password" placeholder="Password" value=password }}
 
-        <button class="signup" {{action 'signup'}}>Sign up</button>
-        <button class="login" {{action 'login'}}>Log in</button>
+            <button type="submit" class="login"
+                    {{bindAttr disabled="running"}}>
+                Log in
+            </button>
+            <button class="signup" {{action 'signup'}}
+                    {{bindAttr disabled="running"}}>
+                Sign up
+            </button>
+
+        </form>
     </div>
-
 </div>
